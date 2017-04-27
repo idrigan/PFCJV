@@ -1,27 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-abstract class Login_controller extends Default_template_controller {
+class Login_controller extends Pfc_login_template_base_controller {
 	
 	
 	public function __construct(){
 		parent::__construct();
 	}
-	
-	protected function renderHeader($head){
-		
-	}
-	
-	
-	protected function renderHeader($header){
-		
-	}
-	
-	protected function renderView($nameView , $params = array()){
-		$this->load->view();
-	}
-	
-	protected function renderFooter($footer){
-		
-	}
+
+	public function index(){
+
+        $this->load_language_file('login');
+
+		$this->parse_document(array(
+				'login_view'
+		),array(
+				//'var_user' => session_get_admin()
+		));
+    }
+
+    public function authenticate(){
+
+    }
+
 }

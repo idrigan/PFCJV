@@ -2,7 +2,7 @@
 if (! defined('BASEPATH'))
     exit('No direct script access allowed');
 
-abstract class Pfc_default_template_base_controller extends Pfc_i18n_base_controller {
+abstract class Pfc_secured_template_base_controller extends Pfc_i18n_base_controller {
 
 	private $footer_vendor_js;
 
@@ -17,7 +17,7 @@ abstract class Pfc_default_template_base_controller extends Pfc_i18n_base_contro
     function __construct ()
     {
         parent::__construct();
-        parent::set_template("templates/default/");
+        parent::set_template("templates/secured/");
 
         // set template files
         parent::set_template_header_files(array(

@@ -258,24 +258,3 @@ if (! function_exists('dir_exists_or_create')) {
     }
 }
 
-if (!function_exists('add_event_card_url')){
-	function add_event_card_url(&$events){
-		
-		if (isempty_array($events)){
-			return FALSE;
-		}
-		
-		foreach ($events as $index=>$event){
-			$events[$index]['s_url_evento'] = base_url(get_route_backoffice_event())."/".encode_url_card(safe_array_get('i_id_evento',$event), safe_array_get('s_nombre',$event)); 
-		}
-		
-		return $events;
-	}
-}
-
-
-if (!function_exists('encode_url_card')){
-	function encode_url_card($id,$name){
-		return urlencode(sanitize_filename_secure($name))."/".encode_identifier($id);
-	}
-}
