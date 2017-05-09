@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: charlie
- * Date: 10/05/17
- * Time: 0:21
- */
+
 class User_model extends CI_Model
 {
     public function __construct()
