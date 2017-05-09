@@ -9,7 +9,7 @@ if (!function_exists('get_route_authenticate')){
 
 if (!function_exists('get_route_backoffice_home')){
     function get_route_backoffice_home(){
-        return BACKOFFICE."/".BACKOFFICE_;
+        return BACKOFFICE."/".BACKOFFICE_HOME;
 
     }
 }

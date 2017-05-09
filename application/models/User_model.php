@@ -21,7 +21,7 @@ class User_model extends CI_Model
         $user = $this->db->escape($user);
         $password = $this->db->escape(sha1($password));
 
-        $sql = "";
+        $sql = "SELECT * FROM usuario WHERE s_email = $user AND s_password = $password AND b_activo = 1 AND b_admin = 1;";
 
         $query = $this->db->query($sql);
 
