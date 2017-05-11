@@ -13,9 +13,23 @@
 
 
 <form action="<?php echo base_url(get_route_authenticate())?>" method="POST">
-
-<input type="text" name="user" value="<?php echo $var_user ?>" placeholder="{user}"/><br>
-<input type="password" name="password" /><br>
-<input type="submit" value="{submit}" />
-
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>{user}</label>
+                <input type="text" name="user" value="<?php echo $var_user ?>" placeholder="{user}" class="form-group"/><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>{password}</label>
+                <input type="password" name="password" class="form-group"/>
+            </div>
+        </div>
+    </div>
+<input type="submit" value="{submit}" class="btn btn-primary"/>
+</div>
 </form>

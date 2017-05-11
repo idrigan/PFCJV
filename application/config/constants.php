@@ -96,6 +96,8 @@ define('SUCCESS_SUFFIX','</div>');
 define('WARNING_PREFIX','<div class="alert alert-warning .bordered m-t-20 m-b-20" role="alert"><button class="close" data-dismiss="alert"></button><span class="f-s-1-5-em m-r-10" ><i class="fa fa-warning"></i></span>');
 define('WARNING_SUFFIX','</div>');
 
+define('CONST_VERSION','1.0.0');
+
 define('BACKOFFICE','gestion');
 //define ('LOGIN_SLUG',"gestion");
 define ('BACKOFFICE_AUTHENTICATE_SLUG',"autenticar");

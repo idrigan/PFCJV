@@ -53,17 +53,39 @@ abstract class Pfc_login_template_base_controller extends Pfc_i18n_base_controll
 
     private function configure_default_head_css ()
     {
-        // default head css' array
-        $this->head_css = array(
 
+        // default vendor js' array
+        $this->head_css = array(
+            '<link href="'.base_url('public/vendor/vendor/bootstrap/css/bootstrap.css').'" rel="stylesheet" type="text/css" />',
+            '<link href="'.base_url('public/vendor/vendor/font-awesome/css/font-awesome.css').'" rel="stylesheet" type="text/css" />',
+            '<link href="'.base_url('public/vendor/vendor/magnific-popup/magnific-popup.css').'" rel="stylesheet" type="text/css" />',
+            '<link href="'.base_url('public/vendor/vendor/bootstrap-datepicker/css/datepicker3.css').'" rel="stylesheet" type="text/css" />',
+            '<link href="'.base_url('public/vendor/stylesheets/theme-admin-extension.css').'" rel="stylesheet" type="text/css" />',
+            '<link href="'.base_url('public/vendor/vendor/select2/select2.css').'" rel="stylesheet" type="text/css" />',
+            '<link href="'.base_url('public/vendor/vendor/jquery-datatables-bs3/assets/css/datatables.css').'" rel="stylesheet" type="text/css" />',
+            '<link href="'.base_url('public/assets/css/custom.css?v'.CONST_VERSION).'" rel="stylesheet" type="text/css" />'
         );
+
     }
 
     private function configure_default_head_js ()
     {
         // default head js' array
         $this->head_js = array(
+            'public/vendor/vendor/jquery/jquery.js',
+            'public/vendor/vendor/jquery-appear/jquery.appear.js',
+            'public/vendor/vendor/jquery-cookie/jquery.cookie.js',
+            'public/vendor/vendor/bootstrap/js/bootstrap.js',
 
+            'public/vendor/vendor/isotope/jquery.isotope.js',
+
+
+            'public/vendor/vendor/magnific-popup/magnific-popup.js',
+
+
+            'public/vendor/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js',
+            'public/vendor/vendor/jquery-validation/jquery.validate.min.js',
+           // 'public/vendor/vendor/jquery-validation/localization/messages_'.get_country_language().'.js',
         );
     }
 
