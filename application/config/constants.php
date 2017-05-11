@@ -85,6 +85,17 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 
+define('ERRORS_PREFIX','<div class="alert alert-danger .bordered m-t-20 m-b-20" role="alert"><button class="close" data-dismiss="alert"></button><span class="f-s-1-5-em m-r-10" ><i class="fa fa-warning"></i></span><strong>{errors-detected}</strong><ul>');
+define('ERRORS_SUFFIX','</ul></div>');
+define('ERROR_PREFIX','<li>');
+define('ERROR_SUFFIX','</li>');
+
+define('SUCCESS_PREFIX','<div class="alert alert-success .bordered m-t-20 m-b-20" role="alert"><button class="close" data-dismiss="alert"></button><span class="f-s-1-5-em m-r-10" ><i class="fa fa-check-square"></i></span>');
+define('SUCCESS_SUFFIX','</div>');
+
+define('WARNING_PREFIX','<div class="alert alert-warning .bordered m-t-20 m-b-20" role="alert"><button class="close" data-dismiss="alert"></button><span class="f-s-1-5-em m-r-10" ><i class="fa fa-warning"></i></span>');
+define('WARNING_SUFFIX','</div>');
+
 define('BACKOFFICE','gestion');
 //define ('LOGIN_SLUG',"gestion");
 define ('BACKOFFICE_AUTHENTICATE_SLUG',"autenticar");

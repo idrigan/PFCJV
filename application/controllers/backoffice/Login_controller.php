@@ -8,14 +8,16 @@ class Login_controller extends Pfc_login_template_base_controller {
 		parent::__construct();
 	}
 
-	public function index(){
+	public function index($form_data = array()){
 
         $this->load_language_file('backoffice/login');
+
+        $this->load->helper('messages_helper');
 
 		$this->parse_document(array(
 				'backoffice/login_view'
 		),array(
-				//'var_user' => session_get_admin()
+				'var_user' => safe_array_get('user',$form_data)
 		));
     }
 
@@ -29,8 +31,8 @@ class Login_controller extends Pfc_login_template_base_controller {
 		if ($this->form_validation->run() == FALSE)
         {
 
-            $this->session_servive->set_error_message($this->form_validation->error_array());
-            $this->index();
+            $this->session_service->set_error_message($this->form_validation->error_array());
+            $this->index(array('user'=>$this->input->post('user',TRUE)));
         }
         else
         {
@@ -50,7 +52,7 @@ class Login_controller extends Pfc_login_template_base_controller {
             $this->session_service->set_admin($user);
             return TRUE;
         }
-        $this->form_validation->set_message('check_credentials','error-incorrect-user');
+        $this->form_validation->set_message('check_credentials','{error-incorrect-user}');
         return FALSE;
     }
 
